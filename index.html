@@ -1,0 +1,570 @@
+<!DOCTYPE html>
+
+<head>
+
+<title>infographics</title>
+
+<link rel="shortcut icon" href="{favicon}">
+
+<link rel="alternate" type="application/rss+xml" href="{RSS}">
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<link href="https://fonts.googleapis.com/css?family=Ubuntu:300,400" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Ubuntu Condensed" rel="stylesheet">
+
+<script src="https://use.fontawesome.com/7527eab36c.js"></script>
+
+<link rel="stylesheet" href="https://cdn.linearicons.com/free/1.0.0/icon-font.min.css">
+
+<style type="text/css">
+
+iframe#tumblr_controls {
+    display:none!important;
+}
+
+.ui-tooltip{  
+    position:absolute;
+    z-index:9999;
+    margin-top:10px;
+}
+
+.ui-tooltip-content{ 
+    background:#fff;
+    padding:2px 3px; 
+    border:1px solid #bbb;
+    font-style:italic;
+    font-size:10px;
+}
+
+::-webkit-scrollbar {
+    height:2px;
+    width:2px;
+    padding-right:2px;
+    background:inherit;
+}
+
+::-webkit-scrollbar-thumb {
+    background:#aaa;
+}
+
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity:.4} 
+  to {opacity:1}
+}
+
+@keyframes fade {
+  from {opacity:.4} 
+  to {opacity:1}
+}
+
+body{
+    font-family:'Ubuntu', sans-serif;
+    font-size:1em;
+    font-weight:300;
+    letter-spacing:1px;
+    color:#666;
+    margin:0;
+    padding:0;
+    background:#eeeeee;
+}
+
+a{
+    text-decoration:none;
+    color:inherit;
+    transition:0.6s ease;
+    border-bottom:3px solid #fff;
+    margin-bottom:-3px;
+}
+a:hover{
+    color:#7d9c9f;
+    border-bottom:3px solid #dfeff0;
+}
+
+aside{
+    position:fixed;
+    top:0;
+    width:100%;
+    padding:0;
+    height:40px;
+    border-bottom:1px solid #aaa;
+    z-index:999999!important;
+    background:#fff;
+}
+.me{
+    position:fixed;
+    right:30px;
+    margin-top:12px;
+    width:auto;
+    color:#aaa;
+}
+.me span{
+    display:inline-block;
+    margin:0;
+    width:30px;
+    text-align:center;
+    transition:0.6s ease;
+}
+.me span:hover{
+    color:#000;
+}
+
+.title{
+    margin:10px 0 0 30px;
+    color:#ad235e;
+    letter-spacing:2px;
+}
+
+.side{
+    display:none;
+    position:fixed;
+    top:40px;
+    width:100%;
+    height:calc(100% - 80px);
+    overflow-y:auto;
+    background:#fff;
+    padding:20px 0;
+}
+
+.side b{
+    font-weight:300;
+    color:#ad235e;
+}
+.side i{
+    font-style:normal;
+    color:#95babd;
+}
+.side ul{
+    list-style-type:none;
+    margin:0;
+    padding:0;
+}
+.side ul:before{
+    content:'— ';
+    color:#95babd;
+}
+
+.heading{
+    font-family:"Ubuntu Condensed", sans-serif;
+    width:160px;
+    margin-left:20px;
+    text-align:left;
+    position:relative;
+}
+
+.bio{
+    margin:0 28px;
+    padding:10px 5px 10px 10px;
+    text-align:left;
+    font-size:0.8em;
+    border-bottom:.8px solid #95babd;
+    line-height:120%;
+    text-indent:-10px;
+}
+.bio:last-of-type{
+    border:none;
+}
+.bio p:last-of-type{ margin-bottom:0; }
+
+.link{
+    margin:0 28px;
+    padding:0 10px;
+    text-align:left;
+    font-size:0.8em;
+    line-height:20px;
+    color:#ad235e;
+}
+
+section{
+    position:fixed;
+    top:40px;
+    height:calc(100% - 40px);
+    width:100%;
+    overflow-y:auto;
+}
+
+.slides{
+    width:calc(100% - 60px);
+    max-width:800px;
+    margin:0 auto;
+    position:relative;
+}
+
+.si{
+    display:none;
+}
+
+.ti{
+    position:sticky;
+    position:webkit-sticky;
+    top:0;
+    border-top:30px solid #eee;
+    font-family:'Ubuntu Condensed', sans-serif;
+    font-size:18px;
+    letter-spacing:2px;
+    text-align:center;
+    padding:15px 20px;
+    background:#fff;
+    border-bottom:1px solid #aaa;
+    margin:0 auto;
+    margin-bottom:30px;
+    z-index:999!important;
+}
+.info{
+    position:fixed;
+    width:160px;
+    z-index:9;
+    background:#fff;
+    padding:20px;
+    text-align:left;
+    font-size:13px;
+    line-height:20px;
+    color:#ad235e;
+}
+
+.icon i{
+    width:15px;
+    text-align:center;
+    margin-right:5px;
+    color:#ad235e;
+}
+
+.desc{
+    width:100%;
+    font-size:inherit;
+    line-height:120%;
+    margin-top:10px;
+    color:#333;
+}
+
+.inf{
+    width:calc(100% - 230px);
+    margin-left:230px;
+    z-index:99;
+}
+.inf img{
+    width:100%;
+    height:auto;
+    margin-bottom:5px;
+}
+.inf inf:last-of-type{
+    margin-bottom:0;
+}
+
+.prev, .next{
+    position:absolute;
+    padding:0;
+    cursor:pointer;
+    height:auto;
+    color:#555;
+    font-weight:100;
+    font-size:18px;
+    line-height:24px;
+    transition:all 0.6s ease;
+    z-index:9999;
+    border:none;
+}
+.p, .n{
+    width:20px;
+    text-align:center;
+}
+.prev{ left:10px; }
+.next{ right:10px; }
+
+.prev:hover, .next:hover{
+    font-size:24px;
+    color:#000;
+    border:none;
+}
+
+@media screen and (min-width:900px) {
+    aside{
+        position:fixed;
+        right:0;
+        top:0;
+        margin:0;
+        width:270px;
+        height:100%;
+        border:none;
+        background:#fff;
+        padding-left:30px;
+    }
+    .me{
+        position:fixed;
+        margin:0;
+        right:270px;
+        padding-top:15px;
+        width:30px;
+        border-right:1px solid #aaa;
+    }
+    .me span{
+        display:block;
+        width:100%;
+        margin-bottom:15px;
+    }
+    .side{
+        position:static;
+        width:100%;
+        background:#fff;
+    }
+    .title{
+        margin-top:30px;
+    }
+    
+    section{
+        position:fixed;
+        top:0;
+        margin:0 300px 0 0;
+        padding:0;
+        width:calc(100% - 300px);
+        height:100%!important;
+        overflow-y:auto;
+    }
+
+}
+
+@media screen and (max-width:600px) {
+    .si{
+        display:block!important;
+        margin-bottom:50px;
+    }
+    
+    .info{
+        position:static;
+        width:calc(100% - 40px);
+        z-index:9;
+    }
+    .inf{
+        width:100%;
+        margin:20px 0 0 0;
+        z-index:9;
+    }
+    .count, .prev, .next{
+        display:none;
+    }
+    .info, .inf{
+        position:relative;
+    }
+}
+
+{CustomCSS}
+
+</style>
+
+</head>
+
+<body>
+
+<aside>
+<div class="me">
+<span class="lnr lnr-user" id="about"></span><span class="lnr lnr-menu" id="menu"></span><span class="lnr lnr-cog" id="tools"></span>
+</div>
+
+<div class="title">LILA HUANG</div>
+
+<div class="side" id="abt">
+<div class="heading">about</div>
+<div class="bio">
+<b>Lila Huang</b> is a first-year <i>computer science</i> student at the <i>University of Waterloo</i>.</div>
+<div class="bio">
+<b>Skills:</b>
+<ul><i>programming</i>: Java, DrRacket, C++, HTML, CSS, JavaScript, JQuery</ul>
+<ul><i>art & design</i>: Paint Tool Sai, Gimp, Adobe Photoshop, Microsoft Office, Piktochart</ul>
+</div>
+<div class="bio">
+<b>Hobbies:</b> digital art and design, classical music, translation
+<p><b>Interests:</b> figure skating, nba, anime</p></div>
+<div class="bio">
+<b>Contact:</b>
+<ul><i>email</i>: moonhouse100@gmail.com</ul>
+</div>
+</div>
+</div>
+
+<div class="side" id="links">
+<div class="heading">links</div>
+<br>
+<div class="link"><span class="icon"><i class="fa fa-rocket" aria-hidden="true"></i></span> <a href="http://jin-boyang.tumblr.com/">Boyang Jin fansite</a></div>
+<div class="link"><span class="icon"><i class="fa fa-id-card-o" aria-hidden="true"></i></span> <a href="http://www.thereckoner.ca/author/lilahuang/">Reckoner profile</a></div>
+<div class="link"><span class="icon"><i class="fa fa-tumblr" aria-hidden="true"></i></span> <a href="http://milquetoasted.tumblr.com">Tumblr</a></div>
+</div>
+
+<div class="side" id="res">
+<div class="heading">credits/tools</div>
+<br>
+<div class="link"><a href="https://piktochart.com">Piktochart</a></div>
+<div class="link"><a href="https://jquery.com/">JQuery</a></div>
+<div class="link"><a href="http://fontawesome.io/">Font Awesome</a></div>
+<div class="link"><a href="https://linearicons.com/free#cdn">Linearicons</a></div>
+</div>
+</aside>
+
+<section>
+
+<div class="slides">
+
+<div class="si">
+<div class="ti">yuzuru hanyu: season 2016-17</div>
+<div class="info">
+<a class="prev" onclick="plusSlides(-1)"><span class="p">&#10094;</span></a>
+<a class="next" onclick="plusSlides(1)"><span class="n">&#10095;</span></a>
+<span class="icon"><i class="fa fa-clock-o" aria-hidden="true"></i></span> 09/04/17
+<div class="desc">A simple graphic showing figure skater Yuzuru Hanyu's programs for 2016-17.</div>
+</div>
+<div class="inf"><img src="https://78.media.tumblr.com/13c628a290fdc1da16842e1b8596beae/tumblr_oooafumjWG1tjxkoro3_r1_1280.png">
+<img src="https://78.media.tumblr.com/bb929eefa8bb0a91b27314d5223fbedd/tumblr_oooafumjWG1tjxkoro2_r1_1280.png">
+<img src="https://78.media.tumblr.com/4862da4eadcee3f7546e7ba11820df54/tumblr_oooafumjWG1tjxkoro1_r1_1280.png"></div>
+</div>
+
+<div class="si">
+<div class="ti">2016-17 MGCI budget breakdown</div>
+<div class="info">
+<a class="prev" onclick="plusSlides(-1)"><span class="p">&#10094;</span></a>
+<a class="next" onclick="plusSlides(1)"><span class="n">&#10095;</span></a>
+<span class="icon"><i class="fa fa-clock-o" aria-hidden="true"></i></span> 04/27/17
+<br><span class="icon"><i class="fa fa-pencil" aria-hidden="true"></i></span> Dylan Xiao
+<br><span class="icon"><i class="fa fa-link" aria-hidden="true"></i></span> <a href="http://thereckoner.ca/2016-2017-mgci-budget-breakdown/">thereckoner.ca</a>
+<div class="desc">Infographic breaking down Marc Garneau CI's budget use in the 2016-17 school year.</div>
+</div>
+<div class="inf"><img src="http://thereckoner.ca/wp-content/uploads/2017/04/budgetedited.png"></div></div>
+
+<div class="si">
+<div class="ti">anna pogorilaya: season 2016-17</div>
+<div class="info">
+<a class="prev" onclick="plusSlides(-1)"><span class="p">&#10094;</span></a>
+<a class="next" onclick="plusSlides(1)"><span class="n">&#10095;</span></a>
+<span class="icon"><i class="fa fa-clock-o" aria-hidden="true"></i></span> 03/18/17
+<br><span class="icon"><i class="fa fa-link" aria-hidden="true"></i></span> <a href="http://web.icenetwork.com/news/2017/01/28/214607974/pogorilaya-uses-acting-skills-to-ramp-up-drama">quote source</a>
+<div class="desc">A set of posters depicting figure skater Anna Pogorilaya's competitive 2016-17 programs and the stories behind them. Text is slightly blurry here due to file issues.</div>
+</div>
+<div class="inf"><img src="https://78.media.tumblr.com/d2d0fd3bb70520daceab36f861b7abed/tumblr_on0yb90l411tjxkoro2_r1_540.png">
+<img src="https://78.media.tumblr.com/f9c21b13b685eb2d999ad03fdd832826/tumblr_on0yb90l411tjxkoro1_540.png"></div>
+</div>
+
+<div class="si">
+<div class="ti">figure skaters of harbin</div>
+<div class="info">
+<a class="prev" onclick="plusSlides(-1)"><span class="p">&#10094;</span></a>
+<a class="next" onclick="plusSlides(1)"><span class="n">&#10095;</span></a>
+<span class="icon"><i class="fa fa-clock-o" aria-hidden="true"></i></span> 01/23/17
+<br><span class="icon"><i class="fa fa-link" aria-hidden="true"></i></span> <a href="http://milquetoasted.tumblr.com/harbinref012017">list of references</a>
+<div class="desc">Infographic about figure skaters from the city of Harbin, China, with a focus on text as decoration.</div>
+</div>
+<div class="inf"><img src="https://78.media.tumblr.com/304e3c0ed458117616950ceb2dc71a76/tumblr_oj82efTTib1tjxkoro1_r2_1280.png">
+<img src="https://78.media.tumblr.com/c8c0a38856dea025bef5d0c94975b0b0/tumblr_oj82efTTib1tjxkoro3_r7_1280.png">
+<img src="https://78.media.tumblr.com/8178814dbdfc3328b65d8cb15be6cd2f/tumblr_oj82efTTib1tjxkoro2_r5_1280.png">
+<img src="https://78.media.tumblr.com/d11b0e3077c0915684dea31012a8e731/tumblr_oj82efTTib1tjxkoro5_r2_1280.png">
+<img src="https://78.media.tumblr.com/856eb405b9632a948807ba994bac1f79/tumblr_oj82efTTib1tjxkoro4_r2_1280.png">
+<img src="https://78.media.tumblr.com/d021fa283a788aae156c609e3fb6bed2/tumblr_oj82efTTib1tjxkoro8_r3_1280.png">
+<img src="https://78.media.tumblr.com/81453f4290a7e94ec0657bde8e03759b/tumblr_oj82efTTib1tjxkoro6_r2_1280.png">
+<img src="https://78.media.tumblr.com/7d370e6ef7cc98d1ba90b3dbb3ede538/tumblr_oj82efTTib1tjxkoro7_r3_1280.png">
+</div>
+</div>
+
+<div class="si">
+<div class="ti">2017 MGCI SAC progress report</div>
+<div class="info">
+<a class="prev" onclick="plusSlides(-1)"><span class="p">&#10094;</span></a>
+<a class="next" onclick="plusSlides(1)"><span class="n">&#10095;</span></a>
+<span class="icon"><i class="fa fa-clock-o" aria-hidden="true"></i></span> 03/04/17
+<br><span class="icon"><i class="fa fa-pencil" aria-hidden="true"></i></span> Cheng Cheng Lin
+<br><span class="icon"><i class="fa fa-link" aria-hidden="true"></i></span> <a href="http://thereckoner.ca/mgci-sac-progress-report-2017/">thereckoner.ca</a>
+</div>
+<div class="inf"><img src="http://thereckoner.ca/wp-content/uploads/2017/04/sac-infographic.png"></div></div>
+
+<div class="si">
+<div class="ti">2016 world weekly in review</a></div>
+<div class="info">
+<a class="prev" onclick="plusSlides(-1)"><span class="p">&#10094;</span></a>
+<a class="next" onclick="plusSlides(1)"><span class="n">&#10095;</span></a>
+<span class="icon"><i class="fa fa-clock-o" aria-hidden="true"></i></span> 02/27/17
+<br><span class="icon"><i class="fa fa-pencil" aria-hidden="true"></i></span> Cheng Cheng Lin
+<br><span class="icon"><i class="fa fa-link" aria-hidden="true"></i></span> <a href="http://thereckoner.ca/year-review-2016/">thereckoner.ca</a></div>
+<div class="inf"><img src="http://thereckoner.ca/wp-content/uploads/2017/02/2016-in-review-NO-NUMBERS.png"></div></div>
+
+<div class="si">
+<div class="ti">garneau happiness index</div>
+<div class="info">
+<a class="prev" onclick="plusSlides(-1)"><span class="p">&#10094;</span></a>
+<a class="next" onclick="plusSlides(1)"><span class="n">&#10095;</span></a>
+<span class="icon"><i class="fa fa-clock-o" aria-hidden="true"></i></span> 01/16/16
+<br><span class="icon"><i class="fa fa-pencil" aria-hidden="true"></i></span> David Hao
+<br><i>design</i>: Valiant Chan and Lila Huang
+<br><span class="icon"><i class="fa fa-link" aria-hidden="true"></i></span> <a href="http://thereckoner.ca/the-garneau-happiness-index/">thereckoner.ca</a>
+</div>
+<div class="inf"><img src="http://thereckoner.ca/wp-content/uploads/2016/01/Student-Happiness-Infographic-1.png"></div></div>
+
+<div class="si">
+<div class="ti">voting systems</div>
+<div class="info">
+<a class="prev" onclick="plusSlides(-1)"><span class="p">&#10094;</span></a>
+<a class="next" onclick="plusSlides(1)"><span class="n">&#10095;</span></a>
+<span class="icon"><i class="fa fa-clock-o" aria-hidden="true"></i></span> 10/20/15
+<br><span class="icon"><i class="fa fa-pencil" aria-hidden="true"></i></span> Daniel Pekar
+<br><span class="icon"><i class="fa fa-link" aria-hidden="true"></i></span> <a href="http://thereckoner.ca/op-ed-winner-takes-all-means-canada-loses/">thereckoner.ca</a>
+</div>
+<div class="inf"><img src="http://thereckoner.ca/wp-content/uploads/2015/10/Voting-Diagram2.png"></div></div>
+
+</div>
+
+</section>
+
+<!-- jquery -->
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="http://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
+
+<script>
+$(document).ready(function(){
+    $(document).tooltip({
+        track:true
+    });
+});
+</script>
+
+<script>
+var menus = {"#about":"#abt", "#menu":"#links", "#tools":"#res"};
+$(document).ready(function(){
+    $.each(menus, function(key,value){
+        $(key).click(function(){
+                $(value).fadeToggle();
+                $(".side").not(value).fadeOut();
+        });
+    });
+});
+</script>
+
+<script>
+var slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("si");
+  if (n > slides.length) {slideIndex = 1;} 
+  if (n < 1) {slideIndex = slides.length;}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none"; 
+  }
+  slides[slideIndex-1].style.display = "block"
+  ;document.body.scrollTop = 0;
+    document.documentElement.scrollTop = 0;
+}
+</script>
+
+</body></html>
