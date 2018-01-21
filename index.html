@@ -19,6 +19,10 @@
 
 <style type="text/css">
 
+iframe#tumblr_controls {
+    display:none!important;
+}
+
 .ui-tooltip{  
     position:absolute;
     z-index:9999;
@@ -240,6 +244,16 @@ section{
     color:#333;
 }
 
+.desc p:last-of-type{
+    margin-bottom:0;
+}
+
+.desc ul{
+    margin:0;
+    margin-left:15px;
+    padding:0;
+}
+
 .inf{
     width:calc(100% - 230px);
     margin-left:230px;
@@ -257,6 +271,7 @@ section{
 .prev, .next{
     position:absolute;
     padding:0;
+    margin-top:-1px;
     cursor:pointer;
     height:auto;
     color:#555;
@@ -379,7 +394,7 @@ section{
 <p><b>Interests:</b> figure skating, nba, anime</p></div>
 <div class="bio">
 <b>Contact:</b>
-<ul><i>email</i>: moonhouse100@gmail.com</ul>
+<ul><i>email</i>: <a href="mailto:moonhouse100@gmail.com">moonhouse100@gmail.com</a></ul>
 </div>
 </div>
 </div>
@@ -407,11 +422,28 @@ section{
 <div class="slides">
 
 <div class="si">
-<div class="ti">yuzuru hanyu: season 2016-17</div>
+<div class="ti"><a class="prev" onclick="plusSlides(-1)"><span class="p">&#10094;</span></a>jin-boyang site theme<a class="next" onclick="plusSlides(1)"><span class="n">&#10095;</span></a></div>
 <div class="info">
-<a class="prev" onclick="plusSlides(-1)"><span class="p">&#10094;</span></a>
-<a class="next" onclick="plusSlides(1)"><span class="n">&#10095;</span></a>
-<span class="icon"><i class="fa fa-clock-o" aria-hidden="true"></i></span> 09/04/17
+<span class="icon"><i class="fa fa-clock-o" aria-hidden="true"></i></span> 12/2017
+<br><span class="icon"><i class="fa fa-link" aria-hidden="true"></i></span> <a href="http://jin-boyang.tumblr.com/">jin-boyang</a>
+<div class="desc">Responsive fansite theme powered by Tumblr, created to give jin-boyang a new look for the Olympic season.<p>Features:
+<ul><li>auto-resizing scrollable sidebar</li>
+<li>sections for schedule, affiliates, and disclaimer</li>
+<li>navigation page with dropdown menus</li>
+<li>search bar</li>
+<li>top nav bar (becomes a menu on small screens)</li>
+<li>sidebar and header images</li>
+</ul></div>
+</div>
+<div class="inf"><img src="https://raw.githubusercontent.com/milquetoasted/milquetoasted.github.io/master/botanic1.png">
+<img src="https://raw.githubusercontent.com/milquetoasted/milquetoasted.github.io/master/botanic2.png">
+<img src="https://raw.githubusercontent.com/milquetoasted/milquetoasted.github.io/master/botanictags.png"></div>
+</div>
+
+<div class="si">
+<div class="ti"><a class="prev" onclick="plusSlides(-1)"><span class="p">&#10094;</span></a>yuzuru hanyu: season 2016-17<a class="next" onclick="plusSlides(1)"><span class="n">&#10095;</span></a></div>
+<div class="info">
+<span class="icon"><i class="fa fa-clock-o" aria-hidden="true"></i></span> 09/2017
 <div class="desc">A simple graphic showing figure skater Yuzuru Hanyu's programs for 2016-17.</div>
 </div>
 <div class="inf"><img src="https://78.media.tumblr.com/13c628a290fdc1da16842e1b8596beae/tumblr_oooafumjWG1tjxkoro3_r1_1280.png">
@@ -420,23 +452,30 @@ section{
 </div>
 
 <div class="si">
-<div class="ti">2016-17 MGCI budget breakdown</div>
+<div class="ti"><a class="prev" onclick="plusSlides(-1)"><span class="p">&#10094;</span></a>2016-17 MGCI budget breakdown<a class="next" onclick="plusSlides(1)"><span class="n">&#10095;</span></div>
 <div class="info">
-<a class="prev" onclick="plusSlides(-1)"><span class="p">&#10094;</span></a>
-<a class="next" onclick="plusSlides(1)"><span class="n">&#10095;</span></a>
-<span class="icon"><i class="fa fa-clock-o" aria-hidden="true"></i></span> 04/27/17
+</a>
+<span class="icon"><i class="fa fa-clock-o" aria-hidden="true"></i></span> 04/2017
 <br><span class="icon"><i class="fa fa-pencil" aria-hidden="true"></i></span> Dylan Xiao
 <br><span class="icon"><i class="fa fa-link" aria-hidden="true"></i></span> <a href="http://thereckoner.ca/2016-2017-mgci-budget-breakdown/">thereckoner.ca</a>
 <div class="desc">Infographic breaking down Marc Garneau CI's budget use in the 2016-17 school year.</div>
 </div>
-<div class="inf"><img src="http://thereckoner.ca/wp-content/uploads/2017/04/budgetedited.png"></div></div>
+<div class="inf"><img src="https://raw.githubusercontent.com/milquetoasted/milquetoasted.github.io/master/budgetedited.png"></div></div>
 
 <div class="si">
-<div class="ti">anna pogorilaya: season 2016-17</div>
+<div class="ti"><a class="prev" onclick="plusSlides(-1)"><span class="p">&#10094;</span></a>SAC's plans for semester 2<a class="next" onclick="plusSlides(1)"><span class="n">&#10095;</span></a></div>
 <div class="info">
-<a class="prev" onclick="plusSlides(-1)"><span class="p">&#10094;</span></a>
-<a class="next" onclick="plusSlides(1)"><span class="n">&#10095;</span></a>
-<span class="icon"><i class="fa fa-clock-o" aria-hidden="true"></i></span> 03/18/17
+<span class="icon"><i class="fa fa-clock-o" aria-hidden="true"></i></span> 03/2017
+<br><span class="icon"><i class="fa fa-link" aria-hidden="true"></i></span> <a href="what the fuck reckoner">thereckoner.ca</a>
+<div class="desc">Infographic depicting the school events planned by MGCI's Student Activity Council.</div>
+</div>
+<div class="inf"><img src="https://raw.githubusercontent.com/milquetoasted/milquetoasted.github.io/master/sac%20infographic%20final.png"></div>
+</div>
+
+<div class="si">
+<div class="ti"><a class="prev" onclick="plusSlides(-1)"><span class="p">&#10094;</span></a>anna pogorilaya: season 2016-17<a class="next" onclick="plusSlides(1)"><span class="n">&#10095;</span></a></div>
+<div class="info">
+<span class="icon"><i class="fa fa-clock-o" aria-hidden="true"></i></span> 03/2017
 <br><span class="icon"><i class="fa fa-link" aria-hidden="true"></i></span> <a href="http://web.icenetwork.com/news/2017/01/28/214607974/pogorilaya-uses-acting-skills-to-ramp-up-drama">quote source</a>
 <div class="desc">A set of posters depicting figure skater Anna Pogorilaya's competitive 2016-17 programs and the stories behind them. Text is slightly blurry here due to file issues.</div>
 </div>
@@ -445,11 +484,30 @@ section{
 </div>
 
 <div class="si">
-<div class="ti">figure skaters of harbin</div>
+<div class="ti"><a class="prev" onclick="plusSlides(-1)"><span class="p">&#10094;</span></a>2017 MGCI SAC progress report<a class="next" onclick="plusSlides(1)"><span class="n">&#10095;</span></a>
+</div>
 <div class="info">
-<a class="prev" onclick="plusSlides(-1)"><span class="p">&#10094;</span></a>
-<a class="next" onclick="plusSlides(1)"><span class="n">&#10095;</span></a>
-<span class="icon"><i class="fa fa-clock-o" aria-hidden="true"></i></span> 01/23/17
+<span class="icon"><i class="fa fa-clock-o" aria-hidden="true"></i></span> 03/2017
+<br><span class="icon"><i class="fa fa-pencil" aria-hidden="true"></i></span> Cheng Cheng Lin
+<br><span class="icon"><i class="fa fa-link" aria-hidden="true"></i></span> <a href="http://thereckoner.ca/mgci-sac-progress-report-2017/">thereckoner.ca</a>
+<div class="desc">A report on MGCI's Student Activity Council and the goals they did or did not achieve.</div>
+</div>
+<div class="inf"><img src="https://raw.githubusercontent.com/milquetoasted/milquetoasted.github.io/master/sac%20infographic.png"></div></div>
+
+<div class="si">
+<div class="ti"><a class="prev" onclick="plusSlides(-1)"><span class="p">&#10094;</span></a>2016 world weekly in review<a class="next" onclick="plusSlides(1)"><span class="n">&#10095;</span></a></div>
+<div class="info">
+<span class="icon"><i class="fa fa-clock-o" aria-hidden="true"></i></span> 02/2017
+<br><span class="icon"><i class="fa fa-pencil" aria-hidden="true"></i></span> Cheng Cheng Lin
+<br><span class="icon"><i class="fa fa-link" aria-hidden="true"></i></span> <a href="http://thereckoner.ca/year-review-2016/">thereckoner.ca</a>
+<div class="desc">A collection of significant events that occured during each month of 2016, based on The Reckoner's World Weekly feature.</div>
+</div>
+<div class="inf"><img src="https://raw.githubusercontent.com/milquetoasted/milquetoasted.github.io/master/2016%20in%20review%20NO%20NUMBERS.png"></div></div>
+
+<div class="si">
+<div class="ti"><a class="prev" onclick="plusSlides(-1)"><span class="p">&#10094;</span></a>figure skaters of harbin<a class="next" onclick="plusSlides(1)"><span class="n">&#10095;</span></a></div>
+<div class="info">
+<span class="icon"><i class="fa fa-clock-o" aria-hidden="true"></i></span> 01/2017
 <br><span class="icon"><i class="fa fa-link" aria-hidden="true"></i></span> <a href="http://milquetoasted.tumblr.com/harbinref012017">list of references</a>
 <div class="desc">Infographic about figure skaters from the city of Harbin, China, with a focus on text as decoration.</div>
 </div>
@@ -465,46 +523,22 @@ section{
 </div>
 
 <div class="si">
-<div class="ti">2017 MGCI SAC progress report</div>
+<div class="ti"><a class="prev" onclick="plusSlides(-1)"><span class="p">&#10094;</span></a>garneau happiness index<a class="next" onclick="plusSlides(1)"><span class="n">&#10095;</span></a></div>
 <div class="info">
-<a class="prev" onclick="plusSlides(-1)"><span class="p">&#10094;</span></a>
-<a class="next" onclick="plusSlides(1)"><span class="n">&#10095;</span></a>
-<span class="icon"><i class="fa fa-clock-o" aria-hidden="true"></i></span> 03/04/17
-<br><span class="icon"><i class="fa fa-pencil" aria-hidden="true"></i></span> Cheng Cheng Lin
-<br><span class="icon"><i class="fa fa-link" aria-hidden="true"></i></span> <a href="http://thereckoner.ca/mgci-sac-progress-report-2017/">thereckoner.ca</a>
-</div>
-<div class="inf"><img src="http://thereckoner.ca/wp-content/uploads/2017/04/sac-infographic.png"></div></div>
-
-<div class="si">
-<div class="ti">2016 world weekly in review</a></div>
-<div class="info">
-<a class="prev" onclick="plusSlides(-1)"><span class="p">&#10094;</span></a>
-<a class="next" onclick="plusSlides(1)"><span class="n">&#10095;</span></a>
-<span class="icon"><i class="fa fa-clock-o" aria-hidden="true"></i></span> 02/27/17
-<br><span class="icon"><i class="fa fa-pencil" aria-hidden="true"></i></span> Cheng Cheng Lin
-<br><span class="icon"><i class="fa fa-link" aria-hidden="true"></i></span> <a href="http://thereckoner.ca/year-review-2016/">thereckoner.ca</a></div>
-<div class="inf"><img src="http://thereckoner.ca/wp-content/uploads/2017/02/2016-in-review-NO-NUMBERS.png"></div></div>
-
-<div class="si">
-<div class="ti">garneau happiness index</div>
-<div class="info">
-<a class="prev" onclick="plusSlides(-1)"><span class="p">&#10094;</span></a>
-<a class="next" onclick="plusSlides(1)"><span class="n">&#10095;</span></a>
-<span class="icon"><i class="fa fa-clock-o" aria-hidden="true"></i></span> 01/16/16
+<span class="icon"><i class="fa fa-clock-o" aria-hidden="true"></i></span> 01/2016
 <br><span class="icon"><i class="fa fa-pencil" aria-hidden="true"></i></span> David Hao
-<br><i>design</i>: Valiant Chan and Lila Huang
 <br><span class="icon"><i class="fa fa-link" aria-hidden="true"></i></span> <a href="http://thereckoner.ca/the-garneau-happiness-index/">thereckoner.ca</a>
+<div class="desc">Various information and statistics on the mental well-being of MGCI students.</div>
 </div>
 <div class="inf"><img src="http://thereckoner.ca/wp-content/uploads/2016/01/Student-Happiness-Infographic-1.png"></div></div>
 
 <div class="si">
-<div class="ti">voting systems</div>
+<div class="ti"><a class="prev" onclick="plusSlides(-1)"><span class="p">&#10094;</span></a>voting systems<a class="next" onclick="plusSlides(1)"><span class="n">&#10095;</span></a></div>
 <div class="info">
-<a class="prev" onclick="plusSlides(-1)"><span class="p">&#10094;</span></a>
-<a class="next" onclick="plusSlides(1)"><span class="n">&#10095;</span></a>
-<span class="icon"><i class="fa fa-clock-o" aria-hidden="true"></i></span> 10/20/15
+<span class="icon"><i class="fa fa-clock-o" aria-hidden="true"></i></span> 10/2015
 <br><span class="icon"><i class="fa fa-pencil" aria-hidden="true"></i></span> Daniel Pekar
 <br><span class="icon"><i class="fa fa-link" aria-hidden="true"></i></span> <a href="http://thereckoner.ca/op-ed-winner-takes-all-means-canada-loses/">thereckoner.ca</a>
+<div class="desc">A comparison of different voting systems.</div>
 </div>
 <div class="inf"><img src="http://thereckoner.ca/wp-content/uploads/2015/10/Voting-Diagram2.png"></div></div>
 
@@ -550,15 +584,15 @@ function currentSlide(n) {
 }
 
 function showSlides(n) {
-  var i;
-  var slides = document.getElementsByClassName("si");
-  if (n > slides.length) {slideIndex = 1;} 
-  if (n < 1) {slideIndex = slides.length;}
-  for (i = 0; i < slides.length; i++) {
-      slides[i].style.display = "none"; 
-  }
-  slides[slideIndex-1].style.display = "block"
-  ;document.body.scrollTop = 0;
+    var i;
+    var slides = document.getElementsByClassName("si");
+    if (n > slides.length) {slideIndex = 1;} 
+    if (n < 1) {slideIndex = slides.length;}
+    for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none"; 
+    }
+    slides[slideIndex-1].style.display = "block"
+    document.body.scrollTop = 0;
     document.documentElement.scrollTop = 0;
 }
 </script>
