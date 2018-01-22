@@ -4,6 +4,10 @@
 
 <title>infographics</title>
 
+<link rel="shortcut icon" href="{favicon}">
+
+<link rel="alternate" type="application/rss+xml" href="{RSS}">
+
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
 <link href="https://fonts.googleapis.com/css?family=Ubuntu:300,400" rel="stylesheet">
@@ -84,17 +88,72 @@ a:hover{
     border-bottom:3px solid #dfeff0;
 }
 
-aside{
+.start{
+    position:fixed;
+    width:100%;
+    height:100%;
+    top:0;
+    left:0;
+    border:none;
+    padding:0;
+    margin:0;
+    background:#fff;
+    z-index:999999!important;
+}
+
+#main{
+    position:absolute;
+    display:block;
+    border:none;
+    padding:0 30px;
+    height:auto;
+    top:calc(50% - 100px);
+    color:#7d9c9f;
+}
+
+#main img{
+    height:100px;
+    float:left;
+    margin:0 40px 50px 40px;
+}
+
+.bti{
+    font-size:40px;
+    color:#ad235e;
+    letter-spacing:2px;
+}
+
+.btn{
+    display:inline-block;
+    margin-top:20px;
+    background:#dfeff0;
+    padding:10px;
+    transition:all 0.5s ease;
+    text-transform:uppercase;
+}
+.btn span{
+    font-size:.9em;
+}
+.btn:hover{
+    cursor:pointer;
+    background:#7d9c9f;
+    color:#fff;
+}
+
+.sm{
     position:fixed;
     top:0;
     width:100%;
     padding:0;
+    margin:0;
     height:40px;
     border-bottom:1px solid #aaa;
-    z-index:999999!important;
     background:#fff;
+    z-index:999999!important;
 }
+
 .me{
+    display:none;
     position:fixed;
     right:30px;
     margin-top:12px;
@@ -113,6 +172,7 @@ aside{
 }
 
 .title{
+    display:none;
     margin:10px 0 0 30px;
     color:#ad235e;
     letter-spacing:2px;
@@ -179,6 +239,7 @@ aside{
 }
 
 section{
+    display:none;
     position:fixed;
     top:40px;
     height:calc(100% - 40px);
@@ -253,6 +314,7 @@ section{
 .inf{
     width:calc(100% - 230px);
     margin-left:230px;
+    margin-bottom:20px;
     z-index:99;
 }
 .inf img{
@@ -291,8 +353,28 @@ section{
     border:none;
 }
 
+.ibox{
+    position:fixed;
+    width:100%;
+    height:100%;
+    padding:0;
+    margin:0;
+    background:rgba(0,0,0,.6);
+    top:0;
+    left:0;
+    z-index:999999;
+    overflow:auto;
+}
+.ibox img{
+    position:relative;
+    margin:50% 0 0 50%;
+    width:auto;
+    max-width:95%;
+    transform:translate(-50%,-50%);
+}
+
 @media screen and (min-width:900px) {
-    aside{
+    .sm{
         position:fixed;
         right:0;
         top:0;
@@ -303,6 +385,11 @@ section{
         background:#fff;
         padding-left:30px;
     }
+    
+    #main{
+        left:calc(50% - 300px);
+    }
+    
     .me{
         position:fixed;
         margin:0;
@@ -338,6 +425,15 @@ section{
 }
 
 @media screen and (max-width:600px) {
+    #main{
+        text-align:center;
+        padding:0;
+    }
+    #main img{
+        float:none;
+        margin:0;
+    }
+    
     .si{
         display:block!important;
         margin-bottom:50px;
@@ -369,12 +465,16 @@ section{
 
 <body>
 
-<aside>
+<aside class="start">
 <div class="me">
 <span class="lnr lnr-user" id="about"></span><span class="lnr lnr-menu" id="menu"></span><span class="lnr lnr-cog" id="tools"></span>
 </div>
 
 <div class="title">LILA HUANG</div>
+
+<div id="main"><img src="https://avatars0.githubusercontent.com/u/29314790"><span class="bti">LILA HUANG<br>—<br></span>devloper | designer | artist<br>
+<span class="btn"><span class="lnr lnr-arrow-right-circle"></span> view my portfolio</span>
+</div>
 
 <div class="side" id="abt">
 <div class="heading">about</div>
@@ -401,6 +501,9 @@ section{
 <div class="link"><span class="icon"><i class="fa fa-rocket" aria-hidden="true"></i></span> <a href="http://jin-boyang.tumblr.com/">Boyang Jin fansite</a></div>
 <div class="link"><span class="icon"><i class="fa fa-id-card-o" aria-hidden="true"></i></span> <a href="http://www.thereckoner.ca/author/lilahuang/">Reckoner profile</a></div>
 <div class="link"><span class="icon"><i class="fa fa-tumblr" aria-hidden="true"></i></span> <a href="http://milquetoasted.tumblr.com">Tumblr</a></div>
+<div class="link"><span class="icon"><i class="fa fa-book" aria-hidden="true"></i></span> <a href="https://milquetoasted.github.io/ficrec/">Fic rec page</a></div>
+<div class="link"><span class="icon"><i class="fa fa-github" aria-hidden="true"></i></span> <a href="https://github.com/milquetoasted">Github</a></div>
+<div class="link"><span class="icon"><i class="fa fa-linkedin-square" aria-hidden="true"></i></span> <a href="https://www.linkedin.com/in/lilahuang/">LinkedIn</a></div>
 </div>
 
 <div class="side" id="res">
@@ -431,7 +534,7 @@ section{
 <li>sidebar and header images</li>
 </ul></div>
 </div>
-<div class="inf"><img src="https://raw.githubusercontent.com/milquetoasted/milquetoasted.github.io/master/botanic1.png">
+<div class="inf"><div><img src="https://raw.githubusercontent.com/milquetoasted/milquetoasted.github.io/master/botanic1.png"></div>
 <img src="https://raw.githubusercontent.com/milquetoasted/milquetoasted.github.io/master/botanic2.png">
 <img src="https://raw.githubusercontent.com/milquetoasted/milquetoasted.github.io/master/botanictags.png"></div>
 </div>
@@ -462,7 +565,6 @@ section{
 <div class="ti"><a class="prev" onclick="plusSlides(-1)"><span class="p">&#10094;</span></a>SAC's plans for semester 2<a class="next" onclick="plusSlides(1)"><span class="n">&#10095;</span></a></div>
 <div class="info">
 <span class="icon"><i class="fa fa-clock-o" aria-hidden="true"></i></span> 03/2017
-<br><span class="icon"><i class="fa fa-link" aria-hidden="true"></i></span> <a href="what the fuck reckoner">thereckoner.ca</a>
 <div class="desc">Infographic depicting the school events planned by MGCI's Student Activity Council.</div>
 </div>
 <div class="inf"><img src="https://raw.githubusercontent.com/milquetoasted/milquetoasted.github.io/master/sac%20infographic%20final.png"></div>
@@ -547,11 +649,44 @@ $(document).ready(function(){
 <script>
 var menus = {"#about":"#abt", "#menu":"#links", "#tools":"#res"};
 $(document).ready(function(){
+    if ($("#main").is(":visible")){
+        var f = function(){
+            $("#main").fadeOut(100,function(){
+                $("aside").fadeOut(100, function(){
+                    $("aside").removeClass("start").addClass("sm").fadeIn();
+                    $(".me").fadeIn();
+                    $(".title").fadeIn(100,function(){
+                        $("section").fadeIn();
+                    });
+                });
+            });
+        };
+        $(document).keyup(f);
+        $(".btn").click(f);
+    }
+    
     $.each(menus, function(key,value){
         $(key).click(function(){
                 $(value).fadeToggle();
                 $(".side").not(value).fadeOut();
         });
+    });
+    
+    /*$(".inf img").click(function(){
+        $(this).parent().addClass("ibox");
+    });*/
+    
+    $(document).keydown(function(e){
+        if ($(".prev").is(":visible")){
+            if (e.keyCode == 37){ 
+                plusSlides(-1);
+                return false;
+            }
+            else if (e.keyCode == 39){
+                plusSlides(1);
+                return false;
+            }
+        }
     });
 });
 </script>
