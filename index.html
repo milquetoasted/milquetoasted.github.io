@@ -2,7 +2,7 @@
 
 <head>
 
-<title>infographics</title>
+<title>quack</title>
 
 <link rel="shortcut icon" href="{favicon}">
 
@@ -24,21 +24,25 @@
 <nav>
 <a href="">art</a>
 <a href="">infographics</a>
-<a href="">translations</a>
-<a href="">about</a>
+<a href="" onclick="event.preventDefault(); loader('translations');">translations</a>
+<a href="" onclick="event.preventDefault(); loader('/');">about</a>
 </nav>
 </span>
 </header>
 <section id="main">
 </section>
 
-<script>
-function email(e) {
-    e.preventDefault();
-}
+<script type="text/javascript" src="pages/about.js"></script>
+<script type="text/javascript" src="pages/translations.js"></script>
 
+<script>
 let contentDiv = document.getElementById('main');
-//contentDiv.innerHTML = aboutpage;
+const pages = {'/': about, 'translations': translations }
+
+let loader = async (path) => {
+  contentDiv.innerHTML = await pages[path]();
+}
+loader('/');
 </script>
 </body>
 
