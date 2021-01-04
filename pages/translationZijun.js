@@ -1,4 +1,4 @@
-let translations =
+let translationZijun =
 `
   <div class="post">
   <div class="imgs">
@@ -8,16 +8,14 @@ let translations =
   <img src="https://66.media.tumblr.com/d81b824aa3b66ac78f4160b8c904cfec/tumblr_onv80c8pGE1tjxkoro4_540.gif">
   </div>
   <div class="posttitle">
-  <p><a href="#/translations/pairs">
-  <b>Chinese pair skating - unlocking the dilemma: interviews with Hongbo Zhao, Sui/Han, Peng/Jin, and Yu/Zhang</b>.</a></p>
+  <p><a href="http://sports.cctv.com/2017/03/28/VIDEECQ6hQtKKptipw7U2Qin170328.shtml"><b>Chinese pair skating - unlocking the dilemma: interviews with Hongbo Zhao, Sui/Han, Peng/Jin, and Yu/Zhang</b>.</a></p>
   <p>Video published by CCTV5 on 28 Mar 2017.</p>
   </div>
   </div>
 
   <div class="post">
   <div class="posttitle">
-  <p><b><a href="#/translations/zijun">
-  Big People - Zijun Li: Growing and training alone, jumping until heaven falls and earth cracks.</a></b></p>
+  <p><b><a href="http://xw.qq.com/sports/20170225012743/SPO2017022501274300?vt=4">Big People - Zijun Li: Growing and training alone, jumping until heaven falls and earth cracks.</a></b></p>
   <p>Article &amp; video published on QQ Sports on 25 Feb 2017.</p>
   </div>
   <div class="imgs">

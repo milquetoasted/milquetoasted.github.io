@@ -1,9 +1,9 @@
-let about = async () => {
-  let src = `
+let about =
+`
     <span>
     <p>hi i'm lila and this site is very much under construction</p>
     <p>i like coding, music, art, and being an armchair sports fan</p>
-    <p>here's my <a href="https://github.com/milquetoasted">github</a> / <a href="https://www.linkedin.com/in/lilahuang/">linkedin</a> / <a href="https://milquetoasted.tumblr.com/">tumblr</a> / <a href="https://jin-boyang.tumblr.com/">boyang jin fanblog</a> / resume</p>
+    <p>here's my <a href="https://github.com/milquetoasted">github</a> / <a href="https://www.linkedin.com/in/lilahuang/">linkedin</a> / <a href="https://milquetoasted.tumblr.com/">tumblr</a> / <a href="https://jin-boyang.tumblr.com/">boyang jin fanblog</a> / <a href="resume.pdf">resume</a></p>
     <br>
     <p class="contact">contact me:</p>
     <form onsubmit="event.preventDefault()">
@@ -22,8 +22,6 @@ let about = async () => {
     </form>
     </span>
     `;
-  return src;
-}
 
 function email(e) {
     e.preventDefault();
