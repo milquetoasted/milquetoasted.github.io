@@ -2,8 +2,8 @@ let infographics =
 `
   <div class="post">
   <div class="imgs">
-  <img src="harbin1.png">
-  <img src="harbin2.png">
+  <img src="images/harbin1.png">
+  <img src="images/harbin2.png">
   </div>
   <div class="posttitle">
   <p>01/2017</p>
@@ -28,8 +28,8 @@ let infographics =
 
   <div class="post">
   <div class="imgs">
-  <img src="review1.png">
-  <img src="review2.png">
+  <img src="images/review1.png">
+  <img src="images/review2.png">
   </div>
   <div class="posttitle">
   <p>12/2016</p>

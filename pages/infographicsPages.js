@@ -27,7 +27,7 @@ let infographicsChen =
 let infographics2016 =
 `
   <div class="infographic">
-  <img src="2016 in review NO NUMBERS.png" style="max-width:700px;">
+  <img src="images/2016 in review NO NUMBERS.png" style="max-width:700px;">
   </div>
   <div class='back'><a href="#/infographics">back to infographics</a></div>
 `; 
