@@ -158,6 +158,11 @@ button:hover{
 
 .trans {
     margin-bottom: 40px;
+    border-bottom: 1px solid #d9d2e9;
+}
+
+.trans:last-of-type {
+    border-bottom: none;
 }
 
 .transtitle {
@@ -183,6 +188,11 @@ button:hover{
     padding: 10px;
 }
 
+.video {
+    width: 100%;
+    margin: 10px 0;
+}
+
 .back {
     font-weight:bold;
 }
@@ -201,11 +211,17 @@ button:hover{
     .row {
         width: 100%;
     }
+    .trans {
+        width: 100%;
+    }
 }
 
 @media screen and (max-width:600px) {
     header { margin: 50px 10px; }
-    section { padding: 0 20px; }
+    section {
+        width: calc(100% - 40px);
+        padding: 0 20px; 
+    }
     form p {
         flex-wrap: wrap;
         margin: 0;

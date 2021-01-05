@@ -34,6 +34,7 @@ let infographics =
   <p><b><a href="#/infographics/harbin">
   Figure Skaters of Harbin
   </a></b></p>
+  <p>China's ice city and its figure skaters.</p>
   </div>
   <div class="imgs">
   <img src="images/harbin1.png">
@@ -51,6 +52,7 @@ let infographics =
   <p><b><a href="#/infographics/chen17"> 
   Nathan Chen, 2017 US Nationals
   </a></b></p>
+  <div>quad quad quad quad quad quad quad</div>
   </div>
   </div>
 

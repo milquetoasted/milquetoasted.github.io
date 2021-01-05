@@ -26,6 +26,7 @@
 <a href="#/art">art</a>
 <a href="#/infographics">infographics</a>
 <a href="#/translations">translations</a>
+<a href="#/stuff">other</a>
 <a href="#/">about</a>
 </nav>
 </span>
@@ -40,6 +41,7 @@
 <script type="text/javascript" src="pages/translations.js"></script>
 <script type="text/javascript" src="pages/translationZijun.js"></script>
 <script type="text/javascript" src="pages/translationPairs.js"></script>
+<script type="text/javascript" src="pages/stuff.js"></script>
 
 <script>
 let contentDiv = document.getElementById('main');
@@ -55,15 +57,26 @@ const pages = {
     '#/infographics/sac': infographicsSac,
     '#/translations': translations,
     '#/translations/pairs': translationPairs,
-    '#/translations/zijun': translationZijun
+    '#/translations/zijun': translationZijun,
+    '#/stuff': stuff
 }
+
+let resize = () => {
+    const videos = document.getElementsByClassName("video");
+    for (var i = 0; i < videos.length; i++) {
+        videos[i].height = (videos[i].clientWidth * 9.0 / 16.0).toString() + "px";
+    }
+}
+window.onresize = resize;
 
 let loader = () => {
   const page = window.location.hash;
   contentDiv.innerHTML = pages[page];
+  resize();
 }
 window.addEventListener('hashchange', loader);
 window.addEventListener('load', loader);
+
 </script>
 </body>
 
