@@ -15,6 +15,10 @@ a {
 }
 a:hover { color: #351c75; }
 
+b {
+    color: #a64d79;
+}
+
 header {
     margin: 50px;
     display: flex;
@@ -27,6 +31,11 @@ header {
     height: 100px;
     background: #000000;
     border-radius: 50%;
+    overflow: hidden;
+}
+.icon img {
+    height: 120px;
+    margin-left: -40%;
 }
 .top {
     padding: 0 20px;
@@ -133,6 +142,26 @@ button:hover{
 
 .posttitle {
     width: calc(100% - 590px);
+}
+
+.trans {
+    margin-bottom: 40px;
+}
+
+.transtitle {
+    font-weight: bold;
+    color: #351c75;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+.transtitle div {
+    font-size: 1.5em;
+}
+
+.back {
+    font-weight:bold;
 }
 
 @media screen and (max-width:900px) {

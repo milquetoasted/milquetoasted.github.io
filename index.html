@@ -9,6 +9,7 @@
 <link rel="alternate" type="application/rss+xml" href="{RSS}">
 
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<meta charset="utf-8">
 
 <link href="https://fonts.googleapis.com/css?family=Lato:300,400,400i,700&display=swap" rel="stylesheet">
 
@@ -18,14 +19,14 @@
 
 <body>
 <header>
-<img class="icon" src="https://pbs.twimg.com/profile_images/1082312285555695617/4pLhwzmw_400x400.jpg">
+<div class="icon"> <img src="goose.jpg"> </div>
 <span class="top">
 <div class="name">lila huang</div>
 <nav>
-<a href="">art</a>
-<a href="">infographics</a>
-<a href="" onclick="event.preventDefault(); loader('translations');">translations</a>
-<a href="" onclick="event.preventDefault(); loader('/');">about</a>
+<a href="#/art">art</a>
+<a href="#/infographics">infographics</a>
+<a href="#/translations">translations</a>
+<a href="#/">about</a>
 </nav>
 </span>
 </header>
@@ -33,16 +34,30 @@
 </section>
 
 <script type="text/javascript" src="pages/about.js"></script>
+<script type="text/javascript" src="pages/infographics.js"></script>
+<script type="text/javascript" src="pages/art.js"></script>
 <script type="text/javascript" src="pages/translations.js"></script>
+<script type="text/javascript" src="pages/translationZijun.js"></script>
+<script type="text/javascript" src="pages/translationPairs.js"></script>
 
 <script>
 let contentDiv = document.getElementById('main');
-const pages = {'/': about, 'translations': translations }
-
-let loader = async (path) => {
-  contentDiv.innerHTML = await pages[path]();
+const pages = {
+    '': about,
+    '#/': about,
+    '#/art': art,
+    '#/infographics': infographics,
+    '#/translations': translations,
+    '#/translations/pairs': translationPairs,
+    '#/translations/zijun': translationZijun
 }
-loader('/');
+
+let loader = () => {
+  const page = window.location.hash;
+  contentDiv.innerHTML = pages[page];
+}
+window.addEventListener('hashchange', loader);
+window.addEventListener('load', loader);
 </script>
 </body>
 
