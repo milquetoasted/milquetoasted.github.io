@@ -144,6 +144,17 @@ button:hover{
     width: calc(100% - 590px);
 }
 
+.infographic {
+    margin-bottom: 40px;
+    width: 100%;
+}
+
+.infographic img {
+    display: block;
+    max-width: 100%;
+    margin: 10px auto;
+}
+
 .trans {
     margin-bottom: 40px;
 }
