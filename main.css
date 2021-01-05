@@ -151,13 +151,11 @@ button:hover{
 .transtitle {
     font-weight: bold;
     color: #351c75;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
     margin-bottom: 20px;
 }
 .transtitle div {
     font-size: 1.5em;
+    margin-bottom: 5px;
 }
 
 .back {
