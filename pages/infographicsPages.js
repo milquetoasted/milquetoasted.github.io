@@ -31,3 +31,27 @@ let infographics2016 =
   </div>
   <div class='back'><a href="#/infographics">back to infographics</a></div>
 `; 
+
+let infographicsYadd =
+`
+  <div class="infographic">
+  <img src="images/yadd.png" style="max-width:610px;">
+  </div>
+  <div class='back'><a href="#/infographics">back to infographics</a></div>
+`;
+
+let infographicsSac =
+`
+  <div class="infographic">
+  <img src="images/sac infographic final.png" style="max-width:610px;">
+  </div>
+  <div class='back'><a href="#/infographics">back to infographics</a></div>
+`;
+
+let infographicsGhi
+`
+  <div class="infographic">
+  <img src="https://reckoner-media.s3.amazonaws.com/wp-content/uploads/2016/01/Student-Happiness-Infographic-1.png">
+  </div>
+  <div class='back'><a href="#/infographics">back to infographics</a></div>
+`;

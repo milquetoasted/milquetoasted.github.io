@@ -32,6 +32,7 @@ header {
     background: #000000;
     border-radius: 50%;
     overflow: hidden;
+    flex-shrink: 0;
 }
 .icon img {
     height: 120px;
@@ -169,6 +170,19 @@ button:hover{
     margin-bottom: 5px;
 }
 
+.row {
+    display: flex;
+    margin: 0 auto;
+    max-width: 100%;
+    justify-content: space-between;
+}
+
+.row > img {
+    max-height: calc(100% - 20px);
+    max-width: 100%;
+    padding: 10px;
+}
+
 .back {
     font-weight:bold;
 }
@@ -184,6 +198,9 @@ button:hover{
         max-width: 520px;
         order: 2;
     }
+    .row {
+        width: 100%;
+    }
 }
 
 @media screen and (max-width:600px) {
@@ -195,4 +212,15 @@ button:hover{
     }
     form input[type=text], textarea { width: 100%; }
     button { margin-top: 10px; }
+
+    .row {
+        height: auto!important;
+        flex-wrap: wrap;
+        padding: 0;
+    }
+    .row > img {
+        padding: 10px 0;
+        width: 100%;
+        height: auto;
+    }
 }
